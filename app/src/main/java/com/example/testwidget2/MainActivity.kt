@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.testwidget2.ui.theme.TestWidget2Theme
+import android.content.Context
+import androidx.datastore.preferences.preferencesDataStore
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,3 +47,5 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
+
+val Context.dataStore by preferencesDataStore(name = "slider_preferences")
